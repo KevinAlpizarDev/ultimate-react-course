@@ -4,7 +4,6 @@ import './index.css'
 import { PizzaMenu } from './PizzaMenu'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
     <PizzaMenu/>
   </StrictMode>,
 )
