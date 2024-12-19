@@ -1,0 +1,17 @@
+/* @font-face {
+    font-family: 'digital-7';
+    src: url('../fonts/digital-7.ttf');
+  } */
+  @import url(https://db.onlinewebfonts.com/c/aa205d91fb5a1df61dec1ff934aaa629?family=Digital-7+V4);
+
+
+
+
+  body {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-family: "Digital-7 V4";
+    font-size: 100px;
+    font-weight: 590;
+    
+  }
