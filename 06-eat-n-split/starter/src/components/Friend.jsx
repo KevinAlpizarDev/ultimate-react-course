@@ -1,7 +1,13 @@
-export const Friend = ({ friend }) => {
-    return (
-      <div className="flex flex-col items-center justify-center hover:bg-color-lightest  w-full h-20 rounded-lg">
-        <li className="flex w-full h-full" key={friend.id}>
+import { Button } from "./Button";
+
+
+export const Friend = ({ friend,  onSelection,  selectedFriend  }) => {
+   
+  const isSelected  = selectedFriend?.id === friend.id
+  
+  return (
+      <div className="flex flex-col items-center justify-center hover:bg-color-lightest mb-1  w-full h-20 rounded-lg">
+        <li className={`${isSelected&& "bg-color-lightest"  } flex w-full h-full rounded-lg `}  key={friend.id}>
           {/* Imagen */}
           <div className="w-1/5 h-full  flex items-center justify-center">
             <img src={friend.image} alt={`${friend.name}'s avatar`} className="h-12 w-12 rounded-full" />
@@ -27,12 +33,7 @@ export const Friend = ({ friend }) => {
   
           {/* Botón */}
           <div className="w-1/5 h-full flex items-center justify-center">
-            <button
-              type="button"
-              className=" bg-color-dark font-bold rounded-lg text-sm px-4 py-2"
-            >
-              Select
-            </button>
+          <Button  onClick={() => onSelection(friend) }>{isSelected ? "Close" : "Select" }</Button>
           </div>
         </li>
       </div>
